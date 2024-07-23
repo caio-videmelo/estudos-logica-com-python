@@ -1,6 +1,15 @@
 import time
 
 def calcular_combinacoes(valor):
+    """
+    Calcula as combinações possíveis de notas para um determinado valor.
+
+    Args:
+        valor (int): O valor a ser sacado.
+
+    Returns:
+        list: Lista de tuplas com as combinações de notas disponíveis.
+    """
     notas_disponiveis = [50, 20, 10]
     combinacoes = []
 
@@ -10,7 +19,7 @@ def calcular_combinacoes(valor):
             quantidade_nota10 = (valor - (quantidade_nota50 * 50 + quantidade_nota20 * 20)) // 10
             
             # Verifica se a combinação é válida
-            if (quantidade_nota50 * 50 + quantidade_nota20 * 20 + quantidade_nota10 * 10) == valor and quantidade_nota10 >= 0:
+            if (quantidade_nota50 * 50 + quantidade_nota20 * 20 + quantidade_nota10 * 10) == valor:
                 combinacoes.append((quantidade_nota50, quantidade_nota20, quantidade_nota10))
 
     # Ordena as combinações pelo número total de notas
@@ -19,7 +28,13 @@ def calcular_combinacoes(valor):
     # Seleciona as 3 combinações com a menor quantidade de notas
     return combinacoes[:3]
 
-def saqueDinheiro(valor):
+def saque_dinheiro(valor):
+    """
+    Realiza o saque do valor especificado exibindo as combinações possíveis de notas.
+
+    Args:
+        valor (int): O valor a ser sacado.
+    """
     # Verifica se o valor está dentro do intervalo permitido
     if valor < 10 or valor > 600:
         print("Impossível sacar esse valor nesse caixa eletrônico com as notas disponíveis!")
@@ -51,7 +66,11 @@ def saqueDinheiro(valor):
         print(f"Opção {i + 1}: {', '.join(partes)}")
 
     # Solicita ao usuário que escolha uma combinação
-    escolha = int(input("Escolha a combinação de notas desejada: ")) - 1
+    try:
+        escolha = int(input("Escolha a combinação de notas desejada: ")) - 1
+    except ValueError:
+        print("Entrada inválida! Por favor, insira um número.")
+        return
 
     if 0 <= escolha < len(combinacoes):
         print("IMPRIMINDO...")
@@ -66,8 +85,18 @@ def saqueDinheiro(valor):
     else:
         print("Opção inválida!")
 
-# Exibe as notas disponíveis antes de solicitar o valor do saque
-print("NOTAS DISPONÍVEIS: R$ 10,00, R$ 20,00, R$ 50,00")
-valor_saque = int(input("Nesse caixa você pode sacar até R$600,00. Informe o valor que deseja sacar: R$ "))
-print('Valor do saque R$', valor_saque)
-saqueDinheiro(valor_saque)
+def main():
+    """
+    Função principal para executar o programa de saque de dinheiro.
+    """
+    # Exibe as notas disponíveis antes de solicitar o valor do saque
+    print("NOTAS DISPONÍVEIS: R$ 10,00, R$ 20,00, R$ 50,00")
+    try:
+        valor_saque = int(input("Nesse caixa você pode sacar até R$600,00. Informe o valor que deseja sacar: R$ "))
+        print(f'Valor do saque: R$ {valor_saque}')
+        saque_dinheiro(valor_saque)
+    except ValueError:
+        print("Entrada inválida! Por favor, insira um número.")
+
+if __name__ == "__main__":
+    main()
