@@ -1,32 +1,43 @@
-Sugestão para mudança do seu README.md
+# Lógica de Programação Python
 
-Lógica de Programação Python
+## :books: Material de Estudos
 
-:books: Material de Estudos
+### 🚀 Começando
 
-🚀 Começando
 Nos ajude a manter atualizado e contribuindo com novos códigos para ajudar a comunidade.
 
-📋 Pré-requisitos
+### 📋 Pré-requisitos
+
 Tempo e vontade de ajudar os outros.
 
-⚙️ Executando os testes
+### ⚙️ Executando os testes
+
 Faça os testes dos códigos e sugira modificações e novos algoritmos
 
-🖇️ Colaborando
+### 🖇️ Colaborando
+
 Por favor, colabore com nosso projeto.
 
-✒️ Autores
+### ✒️ Autores
+
 Desenvolvedor - Trabalho Inicial - Alline Antunes
+
 Denis Cunha - README.md - Denis Cunha
+
 Caio V. I. de Melo - ex46.py - Python_ATM
+
 Você também pode ver a lista de todos os colaboradores que participaram deste projeto.
 
-📄 Licença
+### 📄 Licença
+
 Este projeto está sob a licença (Open Source) - veja o arquivo LICENSE.md para detalhes.
 
-🎁 Expressões de gratidão
+### 🎁 Expressões de gratidão
+
 Conte a outras pessoas sobre este projeto 📢;
+
 Convide alguém da equipe para uma cerveja 🍺;
+
 Um agradecimento publicamente 🫂;
+
 ⌨️ com ❤️ por Denis Cunha 😊
