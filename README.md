@@ -14,7 +14,7 @@ Tempo e vontade de ajudar os outros.
 Faça os testes dos códigos e sugira modificações e novos algoritmos
 
 🖇️ Colaborando
-Por favor, leia o [COLABORACAO.md](Seu Link aqui) para obter detalhes sobre o nosso código de conduta e o processo para nos enviar pedidos de solicitação.
+Por favor, colabore com nosso projeto.
 
 ✒️ Autores
 Desenvolvedor - Trabalho Inicial - Alline Antunes
